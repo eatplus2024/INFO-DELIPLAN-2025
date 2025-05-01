@@ -1,43 +1,65 @@
-document.getElementById("app").innerHTML = `
-  <div style="text-align: center; padding: 2em;">
-    <h1 style="color: blue; font-size: 2em;">TE DAMOS LA BIENVENIDA</h1>
-    
-    <div style="margin: 2em auto; max-width: 600px; text-align: left;">
-      <h2 style="color: goldenrod;">Devolución de dinero:</h2>
-      <p>• Recibe dinero por tus compras en establecimientos aliados.</p>
-      <p>• Gasta en lo que tú quieras.</p>
-      <p>• Sin bancos de por medio.</p>
-    </div>
+document.addEventListener("DOMContentLoaded", () => {
+  const app = document.getElementById("app");
+  app.style.fontFamily = "Arial, sans-serif";
+  app.style.padding = "20px";
+  app.style.maxWidth = "600px";
+  app.style.margin = "auto";
+  app.style.color = "#333";
 
-    <div style="margin: 2em auto; max-width: 600px; text-align: left;">
-      <h2 style="color: goldenrod;">Premios sorpresa, descuentos especiales y domicilios gratis:</h2>
-      <p>• Participa automáticamente solo por usar la app.</p>
-      <p>• Beneficios reales cada semana.</p>
-    </div>
+  const title = document.createElement("h1");
+  title.textContent = "TE DAMOS LA BIENVENIDA";
+  title.style.fontSize = "24px";
+  title.style.textAlign = "center";
+  title.style.color = "#004aad";
+  app.appendChild(title);
 
-    <div style="margin: 2em auto; max-width: 600px; text-align: left;">
-      <h2 style="color: blue;">¿Cómo Funciona?</h2>
-      <p>1. Pide tu tarjeta DeliPlan gratis.</p>
-      <p>2. Úsala en los establecimientos aliados.</p>
-      <p>3. Recibe tu devolución directamente en la app.</p>
-    </div>
+  const sections = [
+    "DeliPlan es la aplicación móvil yopaleña que te permite encontrar de manera fácil, rápida y segura, una amplia variedad de establecimientos comerciales de gastronomía y comercio en general. Gracias al patrocinio de nuestros comerciantes afiliados, ofrecemos una serie de beneficios exclusivos para nuestros usuarios.",
+    "\n\nDevolución de dinero:\nRecibe $5.000 pesos que te devuelve DeliPlan una vez al mes en cada establecimiento, en compras superiores a $10.000, presentando tu Tarjeta/carnet gratuita, el dinero acumulado será entregado a fin de cada mes.",
+    "\n\nPremios sorpresa, descuentos especiales y domicilios gratis:\npodrás recibir premios sorpresa, descuentos especiales en algunos de los establecimientos afiliados, y disfruta de un servicio a domicilio gratis a partir de tu quinto pedido con “DomiDani”.",
+    "\n\nCómo Funciona:\nPara acceder a estos increíbles beneficios, solo necesitas solicitar tu Tarjeta/carnet de Beneficios totalmente gratuita. Esta tarjeta virtual funciona de manera similar a los sistemas de puntos de grandes almacenes y estaciones de servicio. Presenta tu tarjeta virtual al momento de pagar tus compras en los establecimientos afiliados y comienza a disfrutar de todas las ventajas que DeliPlan tiene para ti. Si tienes preguntas, no dudes en contactarnos. ¡Estamos aquí para ayudarte!",
+    "\n\nTérminos y Condiciones:\nEstos beneficios son gratuitos y están sujetos a modificaciones que se publicarán en este apartado."
+  ];
 
-    <div style="margin-top: 3em;">
-      <div style="background-color: #d0e1f9; padding: 1em; border-radius: 10px; margin-bottom: 1.5em;">
-        <p style="font-size: 1.1em;">Solicita tu tarjeta gratis</p>
-        <a href="https://forms.gle/dVgsnikiGkgRo2kD6" target="_blank"
-           style="display: inline-block; padding: 0.7em 2em; background-color: #e6ecfa; color: #2266cc; border-radius: 25px; text-decoration: none; box-shadow: 2px 2px 5px rgba(0,0,0,0.2);">
-          Solicitar Tarjeta
-        </a>
-      </div>
+  sections.forEach(text => {
+    const p = document.createElement("p");
+    p.textContent = text;
+    p.style.marginBottom = "20px";
+    app.appendChild(p);
+  });
 
-      <div style="background-color: #337af5; padding: 1em; border-radius: 10px;">
-        <p style="font-size: 1.1em; color: white;">Escribir a soporte de DeliPlan</p>
-        <a href="https://forms.gle/aYB4m8Rg87H9SVsk9" target="_blank"
-           style="display: inline-block; padding: 0.7em 2em; background-color: #d2d8fd; color: #4b3dd5; border-radius: 25px; text-decoration: none; box-shadow: 2px 2px 5px rgba(0,0,0,0.2);">
-          ESCRIBIR
-        </a>
-      </div>
-    </div>
-  </div>
-`;
+  const buttonContainer = document.createElement("div");
+  buttonContainer.style.display = "flex";
+  buttonContainer.style.flexDirection = "column";
+  buttonContainer.style.gap = "15px";
+  buttonContainer.style.marginTop = "30px";
+
+  const buttons = [
+    {
+      text: "Solicitar Tarjeta",
+      link: "https://forms.gle/dVgsnikiGkgRo2kD6"
+    },
+    {
+      text: "Contactar Soporte",
+      link: "https://forms.gle/aYB4m8Rg87H9SVsk9"
+    }
+  ];
+
+  buttons.forEach(({ text, link }) => {
+    const btn = document.createElement("a");
+    btn.textContent = text;
+    btn.href = link;
+    btn.target = "_blank";
+    btn.style.textAlign = "center";
+    btn.style.padding = "15px";
+    btn.style.borderRadius = "10px";
+    btn.style.background = "#007BFF";
+    btn.style.color = "white";
+    btn.style.textDecoration = "none";
+    btn.style.fontWeight = "bold";
+    btn.style.fontSize = "16px";
+    buttonContainer.appendChild(btn);
+  });
+
+  app.appendChild(buttonContainer);
+});
