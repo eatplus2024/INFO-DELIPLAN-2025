@@ -25,21 +25,21 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   sections.forEach(({ heading, content }) => {
-    const section = document.createElement("section");
-
     const h2 = document.createElement("h2");
     h2.textContent = heading;
-    section.appendChild(h2);
+    app.appendChild(h2);
 
     const p = document.createElement("p");
     p.textContent = content;
-    section.appendChild(p);
-
-    app.appendChild(section);
+    app.appendChild(p);
   });
 
   const buttonContainer = document.createElement("div");
-  buttonContainer.className = "button-container";
+  buttonContainer.style.marginTop = "30px";
+  buttonContainer.style.display = "flex";
+  buttonContainer.style.flexDirection = "column";
+  buttonContainer.style.alignItems = "center";
+  buttonContainer.style.gap = "12px";
 
   const buttons = [
     {
@@ -56,9 +56,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const button = document.createElement("a");
     button.textContent = text;
     button.href = link;
-    button.className = "button";
-    button.target = "_blank";
-    button.rel = "noopener noreferrer";
+    button.style.display = "inline-block";
+    button.style.padding = "12px 20px";
+    button.style.backgroundColor = "#1e90ff";
+    button.style.color = "#fff";
+    button.style.textDecoration = "none";
+    button.style.borderRadius = "4px";
+    button.style.fontSize = "16px";
+    button.style.width = "220px";
+    button.style.textAlign = "center";
+    button.style.boxShadow = "0 2px 4px rgba(0,0,0,0.1)";
+    button.onmouseover = () => button.style.backgroundColor = "#0f6bcf";
+    button.onmouseout = () => button.style.backgroundColor = "#1e90ff";
+
     buttonContainer.appendChild(button);
   });
 
