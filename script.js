@@ -10,25 +10,25 @@ document.addEventListener("DOMContentLoaded", () => {
   app.appendChild(title);
 
   const intro = document.createElement("p");
-  intro.textContent = "DeliPlan es la aplicación móvil yopaleña que te permite encontrar de manera fácil, rápida y segura una amplia variedad de establecimientos de gastronomía y comercio en general. Gracias al patrocinio de nuestros comercios afiliados, ofrecemos beneficios exclusivos.";
+  intro.textContent = "DeliPlan es una aplicación móvil yopaleña que te permite encontrar, de forma fácil, rápida y segura, una amplia variedad de establecimientos de gastronomía y comercio en general. Gracias al patrocinio de nuestros comerciantes afiliados, ofrecemos beneficios exclusivos para nuestros usuarios.";
   app.appendChild(intro);
 
   const sections = [
     {
       heading: "💰 Devolución de dinero",
-      content: "Recibe $5.000 pesos que te devuelve DeliPlan una vez al mes en cada establecimiento afiliado, por compras superiores a $10.000. Solo debes presentar tu tarjeta gratuita y acumularás el dinero, que será entregado al final del mes."
+      content: "Recibe $5.000 pesos que DeliPlan te reembolsa una vez al mes en cada establecimiento afiliado. Este beneficio aplica para compras superiores a $10.000. Solo debes presentar tu tarjeta gratuita. El dinero acumulado será entregado al finalizar cada mes."
     },
     {
-      heading: "🎁 Premios, descuentos y domicilios gratis",
-      content: "Disfruta de premios sorpresa, descuentos especiales en establecimientos afiliados y un servicio de domicilio gratuito desde tu quinto pedido con 'DomiDani'."
+      heading: "🎁 Premios, descuentos y domicilios gratuitos",
+      content: "Podrás acceder a premios sorpresa, descuentos especiales en establecimientos afiliados y un servicio de domicilio gratuito a partir de tu quinto pedido con nuestro aliado “DomiDani”."
     },
     {
       heading: "🔍 ¿Cómo funciona?",
-      content: "Solicita tu tarjeta de beneficios completamente gratuita. Funciona como una tarjeta de puntos. Preséntala al pagar en los establecimientos afiliados y empieza a disfrutar tus ventajas."
+      content: "Para acceder a estos beneficios, solicita tu tarjeta virtual gratuita. Esta funciona como un sistema de puntos: preséntala al momento de pagar en los establecimientos afiliados y comienza a disfrutar de las ventajas que DeliPlan tiene para ti."
     },
     {
       heading: "📜 Términos y condiciones",
-      content: "Estos beneficios son totalmente gratuitos y están sujetos a cambios. Las modificaciones serán publicadas en esta página."
+      content: "Los beneficios ofrecidos son gratuitos y están sujetos a cambios. Cualquier modificación será publicada en este espacio."
     }
   ];
 
@@ -52,11 +52,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const buttons = [
     {
-      text: "📝 Solicitar Tarjeta",
+      text: "Solicitar Tarjeta",
       link: "https://forms.gle/dVgsnikiGkgRo2kD6"
     },
     {
-      text: "💬 Contactar Soporte",
+      text: "Contactar Soporte",
       link: "https://forms.gle/aYB4m8Rg87H9SVsk9"
     }
   ];
