@@ -1,4 +1,60 @@
-/* Puedes dejar este archivo vacío si prefieres que todo el estilo visual esté en el JS */
 body {
-  background-color: #f7f9fc;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #ffffff, #f0f4f8);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+}
+
+h1, h2 {
+  margin-bottom: 10px;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+p:hover {
+  transform: scale(1.01);
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+  align-items: center;
+}
+
+a.button {
+  display: block;
+  text-align: center;
+  width: 90%;
+  max-width: 300px;
+  padding: 14px 20px;
+  background-color: #1e90ff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+a.button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+.container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
 }
