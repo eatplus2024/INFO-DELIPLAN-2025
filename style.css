@@ -1,6 +1,4 @@
-/* Solo detalles básicos. Lo visual fuerte está en el JS */
+/* Puedes dejar este archivo vacío si prefieres que todo el estilo visual esté en el JS */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  background-color: #f7f9fc;
 }
